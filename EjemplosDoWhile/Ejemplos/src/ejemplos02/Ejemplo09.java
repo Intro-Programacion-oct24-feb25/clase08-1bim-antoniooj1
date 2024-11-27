@@ -35,12 +35,23 @@ public class Ejemplo09 {
         cadenaFinal = "Listado de Notas\n";
         
         do {
+             System.out.println("Ingrese su nombre");
+            nombre = entrada.nextLine(); 
+            
+            System.out.println("Ingrese calificaciones, solo valor entero");
+            nota = entrada.nextInt(); 
             
             
             // agrego valor al acumulador
             suma = suma + nota;
             // agrego una unidad al contador para luego sacar el promedio
             contador_calificaciones = contador_calificaciones + 1;
+            cadenaFinal = String.format("%sCalificacion %d"
+                + " del estudiante %s\n",
+                cadenaFinal,
+                nota,
+                nombre);
+               
             
             
             System.out.println("Ingrese (-111) si desea salir del ciclo; "
@@ -58,6 +69,8 @@ public class Ejemplo09 {
         } while (bandera); // (bandera==true)
         
         // promedio = suma / contador_calificaciones;
+        //Calificación 10 del estudiante rené
+        //Calificación 7 del estudiante rolando
         promedio = (double)suma / contador_calificaciones;
         cadenaFinal = String.format("%s\nPromedio de calificaciones: %.2f",
                 cadenaFinal,
