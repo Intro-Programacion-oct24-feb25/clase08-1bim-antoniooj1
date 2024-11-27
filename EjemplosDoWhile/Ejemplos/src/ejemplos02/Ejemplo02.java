@@ -34,6 +34,12 @@ public class Ejemplo02 {
             System.out.println("Ingrese (s) o (yes)"
                     + "o (si) o (y) si desea salir del ciclo ");
             salida = entrada.nextLine();
+           /*
+            if(salida.equals("s") || salida.equals("si") || salida.equals("yes")
+                    || salida.equals("y")){
+                bandera = false;
+            }
+            */
             switch(salida){
                 case "si":
                 case "s":
